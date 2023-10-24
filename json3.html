@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>JSON 3</title>
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <form id="filter-form">
+        <label for="category">Filter by Category:</label>
+        <select id="category" name="category"></select>
+        <button type="button" id="filterBtn">Filter</button>
+    </form>
+
+    <div id="prod-list"></div>
+
+    <script>
+        $(document).ready(function () {
+            var drinks;
+
+            $.get("products.json", function (data) {
+                drinks = data;
+                buildDropdown();
+            });
+
+            function buildDropdown() {
+                var dropdown = $("#category");
+                var categories = [];
+
+                $.each(drinks, function (index, drink) {
+                    $.each(drink.categories, function (index, category) {
+                        if ($.inArray(category, categories) === -1) {
+                            categories.push(category);
+                            
+                            var option = $("<option>", {
+                                text: category,
+                                value: category
+                            });
+                            
+                            dropdown.append(option);
+                        }
+                    });
+                });
+
+                $("#filterBtn").click(filter);
+            }
+
+            function filter() {
+                var selected = $("#category").val();
+
+                var filtered = [];
+
+                for (var i = 0; i < drinks.length; i++) {
+                        var drink = drinks[i];
+                        if (drink.categories.indexOf(selected) !== -1) {
+                                filtered.push(drink);
+                        }
+                }
+
+                var result = $("#prod-list");
+                result.empty(); 
+
+                $.each(filtered, function (index, product) {
+                        var drink = $("<div>").html(product.name);
+                        result.append(drink);
+                });
+
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>JSON 2</title>
+	<script   src="https://code.jquery.com/jquery-3.1.1.min.js"   
+	integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   
+	crossorigin="anonymous"></script>
+        <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+        <div id="json-prods"></div>
+
+	
+        <script>
+	$.get( "products.json", 
+			function( data ) {
+				str = "<ul>";
+				data.forEach(function(drink) { 
+				str +=  "<br>"
+                                       + "<strong>" + drink.name + "</strong>" +  "<br>" 
+				       + "*:..｡o " + drink.description + "<br>"
+                                       + "*:..｡o " + drink.size + "<br>"
+                                       + "*:..｡o " + drink.price + "<br>"
+                                       + "*:..｡o " + drink.categories.join(", ") + "<br>";
+				}) 
+	str += "</ul>";
+	document.getElementById('json-prods').innerHTML = str;  
+	})
+        </script>
+	
+</body>
+</html>

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Products JSON</title>
+</head>
+<body>
+  
+
+  <script>
+    var drinks = {
+    "products": [
+        {
+            "name": "OG Milk Tea",
+            "type": "drink",
+            "description": "Our classic go-to: the original Milk Tea! Made with our signature brown sugar blend pearls.",
+            "size": "Medium",
+            "price": 5,
+            "categories": ["Milk Tea", "Brown Sugar", "Pearls", "Cold/hot"]
+        },
+        {
+            "name": "Strawberry Tea with Lychee Jelly",
+            "type": "drink",
+            "description": "Feeling sweet? Try our famous Cherry Blossom festival flavor, a fruity strawberry tea with lychee jellies!",
+            "size": "Medium",
+            "price": 7.50,
+            "categories": ["Strawberry", "Tea", "Lychee Jelly", "Cold"]
+        },
+        {
+            "name": "Taro Milk Tea",
+            "type": "drink",
+            "description": "Classic milk tea; taro flavored. Includes pearls.",
+            "size": "Large",
+            "price": 7.50,
+            "categories": ["Milk", "Tea", "Taro", "Pearls", "Cold/hot"]
+        },
+        {
+            "name": "Peach Green Tea",
+            "type": "drink",
+            "description": "Refreshing fruity green tea. Add-on options available.",
+            "size": "Medium",
+            "price": 4.50,
+            "categories": ["Fruity", "Peach", "Green Tea", "Cold/hot"]
+        },
+        {
+            "name": "Oreo Milk Tea",
+            "type": "drink",
+            "description": "Looking for a sweet treat? Our oreo-flavored milk tea with oreo crumble is a must-have!",
+            "size": "Medium",
+            "price": 4.50,
+            "categories": ["Oreo", "Milk Tea", "Cold/hot"]
+        },
+        {
+            "name": "Espresso Burst",
+            "type": "drink",
+            "description": "Energy booster. Creamy espresso drink for the busy days.",
+            "size": "Small",
+            "price": 5.50,
+            "categories": ["Espresso", "Milk", "Caffeine", "Hot"]
+        },
+        {
+            "name": "Pumpkin Pie Cream Tea",
+            "type": "drink",
+            "description": "Perfect fall season flavor! Light cream tea with pumpkin pie flavors!",
+            "size": "Medium",
+            "price": 6,
+            "categories": ["Pumpkin Pie", "Cream Tea", "Cold/hot"]
+        },
+        {
+            "name": "Jasmine Milk Tea",
+            "type": "drink",
+            "description": "Sophisticated, fancy, and aromatic. Jasmine tea with milk and star jelly.",
+            "size": "Large",
+            "price": 8,
+            "categories": ["Jasmine", "Milk Tea", "Star Jelly", "Cold"]
+        },
+        {
+            "name": "Blueberry Bliss",
+            "type": "drink",
+            "description": "Indulge in the refreshing taste of blueberries with our Blueberry Bliss drink.",
+            "size": "Medium",
+            "price": 6.50,
+            "categories": ["Blueberry", "Fruity", "Cold"]
+        },
+        {
+            "name": "Vanilla Chai Latte",
+            "type": "drink",
+            "description": "Experience the warm and comforting flavors of vanilla and chai spices in our Vanilla Chai Latte.",
+            "size": "Large",
+            "price": 6.50,
+            "categories": ["Chai", "Latte", "Vanilla", "Hot"]
+        },
+        {
+            "name": "Mango Tango Smoothie",
+            "type": "drink",
+            "description": "Get a tropical kick with our Mango Tango Smoothie, a refreshing blend of mango goodness.",
+            "size": "Medium",
+            "price": 5.99,
+            "categories": ["Mango", "Smoothie", "Fruity", "Cold"]
+        },
+        {
+            "name": "Caramel Macchiato",
+            "type": "drink",
+            "description": "Savor the rich, caramel sweetness of our Caramel Macchiato with a kick of espresso.",
+            "size": "Large",
+            "price": 6.99,
+            "categories": ["Caramel", "Espresso", "Latte", "Hot"]
+        }
+    ]
+    
+  };
+
+  strDrinks  = JSON.stringify(drinks);	
+  document.write (strDrinks +  "<br>");
+
+
+  </script>
+</body>
+</html>
